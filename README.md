@@ -1,2 +1,2 @@
 # Shop-Bundle
-This is a demo project to highlight our programming style.
+This is a demo project to highlight programming skills.
