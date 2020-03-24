@@ -1,0 +1,503 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:Store.Client.Controls"
+                    xmlns:fa="http://schemas.fontawesome.io/icons/"
+                    xmlns:local="clr-namespace:Store.Client.Styles">
+
+    <ControlTemplate x:Key="ImageButton.Button.Template" TargetType="{x:Type Controls:ImageButton}">
+        <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                SnapsToDevicePixels="True">
+            <StackPanel HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Orientation="{TemplateBinding Orientation}">
+                <fa:ImageAwesome x:Name="buttonIcon"
+                                 Width="{TemplateBinding ImageWidth}"
+                                 Height="{TemplateBinding ImageHeight}"
+                                 Margin="{TemplateBinding Padding}"
+                                 HorizontalAlignment="Center"
+                                 Foreground="{TemplateBinding Foreground}"
+                                 Icon="{TemplateBinding Tag}" />
+
+                <ContentPresenter x:Name="contentPresenter"
+                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                  Content="{TemplateBinding Content}"
+                                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  Focusable="False"
+                                  RecognizesAccessKey="True"
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                  Visibility="{Binding RelativeSource={RelativeSource AncestorType=Controls:ImageButton, Mode=FindAncestor}, Path=Content, Converter={StaticResource ValueToVisibilityConverter}}" />
+            </StackPanel>
+
+
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="border" Property="Background" Value="#FFF4F4F4" />
+                <Setter TargetName="border" Property="BorderBrush" Value="#FFADB2B5" />
+                <Setter Property="Foreground" Value="#FF838383" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="Header.Button.Template" TargetType="{x:Type Controls:ImageButton}">
+        <Border x:Name="border" SnapsToDevicePixels="True">
+            <Grid HorizontalAlignment="{TemplateBinding HorizontalAlignment}">
+                <fa:ImageAwesome Margin="{TemplateBinding Padding}"
+                                 Foreground="{TemplateBinding Background}"
+                                 Icon="Circle" />
+                <fa:ImageAwesome x:Name="buttonIcon"
+                                 Width="{TemplateBinding ImageWidth}"
+                                 Height="{TemplateBinding ImageHeight}"
+                                 Margin="{TemplateBinding Padding}"
+                                 HorizontalAlignment="Center"
+                                 Foreground="{TemplateBinding Foreground}"
+                                 Icon="{TemplateBinding Tag}" />
+
+                <ContentPresenter x:Name="contentPresenter"
+                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                  Content="{TemplateBinding Content}"
+                                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  Focusable="False"
+                                  RecognizesAccessKey="True"
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                  Visibility="{Binding RelativeSource={RelativeSource AncestorType=Controls:ImageButton, Mode=FindAncestor}, Path=Content, Converter={StaticResource ValueToVisibilityConverter}}" />
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="border" Property="Background" Value="#FFF4F4F4" />
+                <Setter TargetName="border" Property="BorderBrush" Value="#FFADB2B5" />
+                <Setter Property="Foreground" Value="#FF838383" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="OperationBar.Button.Template" TargetType="{x:Type Controls:ImageButton}">
+        <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                SnapsToDevicePixels="True">
+            <StackPanel HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Orientation="{TemplateBinding Orientation}">
+                <fa:ImageAwesome Width="{TemplateBinding ImageWidth}"
+                                 Height="{TemplateBinding ImageHeight}"
+                                 Margin="{TemplateBinding Padding}"
+                                 Foreground="{TemplateBinding Foreground}"
+                                 Icon="{TemplateBinding Tag}"
+                                 SnapsToDevicePixels="True" />
+                <ContentPresenter x:Name="contentPresenter"
+                                  Margin="{TemplateBinding Padding}"
+                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                  Content="{TemplateBinding Content}"
+                                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  Focusable="False"
+                                  RecognizesAccessKey="True"
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                  Visibility="{Binding RelativeSource={RelativeSource AncestorType=Controls:ImageButton, Mode=FindAncestor}, Path=Content, Converter={StaticResource ValueToVisibilityConverter}}" />
+            </StackPanel>
+
+
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsDefaulted" Value="True">
+                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="border" Property="Background" Value="#EAEAEA" />
+                <Setter TargetName="border" Property="BorderBrush" Value="#EAEAEA" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="border" Property="Background" Value="#E2E2E2" />
+                <Setter TargetName="border" Property="BorderBrush" Value="#E2E2E2" />
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter TargetName="border" Property="Background" Value="#DFDFDF" />
+                <Setter TargetName="border" Property="BorderBrush" Value="#DFDFDF" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="border" Property="Background" Value="#FFF4F4F4" />
+                <Setter TargetName="border" Property="BorderBrush" Value="#FFADB2B5" />
+                <Setter Property="Foreground" Value="#FF838383" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="MainMenu.Button.Template" TargetType="{x:Type Controls:MenuButton}">
+        <Grid HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Background="Transparent">
+            <Grid Visibility="{TemplateBinding IsMenuOpen, Converter={StaticResource NotBooleanToVisibilityConverter}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <fa:ImageAwesome x:Name="buttonIcon"
+                                 Width="{TemplateBinding ImageWidth}"
+                                 Height="{TemplateBinding ImageHeight}"
+                                 Margin="{TemplateBinding Padding}"
+                                 HorizontalAlignment="Center"
+                                 Foreground="{TemplateBinding Foreground}"
+                                 Icon="{TemplateBinding Tag}" />
+
+                <ContentPresenter x:Name="contentPresenter"
+                                  Grid.Row="1"
+                                  Margin="{TemplateBinding Padding}"
+                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                  Content="{TemplateBinding Content}"
+                                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  Focusable="False"
+                                  RecognizesAccessKey="True"
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" Visibility="{TemplateBinding IsMenuOpen, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <fa:ImageAwesome x:Name="buttonIconExpanded"
+                                 Width="{TemplateBinding ImageWidth}"
+                                 Height="{TemplateBinding ImageHeight}"
+                                 Margin="{TemplateBinding Padding}"
+                                 HorizontalAlignment="Center"
+                                 Foreground="{TemplateBinding Foreground}"
+                                 Icon="{TemplateBinding Tag}" />
+
+                <ContentPresenter x:Name="contentPresenterExpanded"
+                                  Grid.Column="1"
+                                  Margin="{TemplateBinding Padding}"
+                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                  Content="{TemplateBinding Content}"
+                                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  Focusable="False"
+                                  RecognizesAccessKey="True"
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="White" />
+                <Setter TargetName="buttonIconExpanded" Property="Foreground" Value="White" />
+                <Setter TargetName="contentPresenterExpanded" Property="TextElement.Foreground" Value="White" />
+                <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="White" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="White" />
+                <Setter TargetName="buttonIconExpanded" Property="Foreground" Value="White" />
+                <Setter TargetName="contentPresenterExpanded" Property="TextElement.Foreground" Value="White" />
+                <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="White" />
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="White" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="MainMenu.Button.Style" TargetType="{x:Type Controls:MenuButton}">
+        <Setter Property="Foreground" Value="LightGray" />
+        <Setter Property="Template" Value="{StaticResource MainMenu.Button.Template}" />
+    </Style>
+
+    <Style x:Key="Header.Button.Style" TargetType="{x:Type Controls:ImageButton}">
+        <Setter Property="FocusVisualStyle">
+            <Setter.Value>
+                <Style>
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <Rectangle Margin="2"
+                                           SnapsToDevicePixels="True"
+                                           Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                                           StrokeDashArray="1 2"
+                                           StrokeThickness="1" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Foreground" Value="{StaticResource Blue.Brush}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="4" />
+        <Setter Property="Template" Value="{StaticResource Header.Button.Template}" />
+    </Style>
+
+    <Style x:Key="OperationBar.Button.Style" TargetType="{x:Type Controls:ImageButton}">
+        <Setter Property="FocusVisualStyle">
+            <Setter.Value>
+                <Style>
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <Rectangle Margin="2"
+                                           SnapsToDevicePixels="True"
+                                           Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                                           StrokeDashArray="1 2"
+                                           StrokeThickness="1" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Padding" Value="3,5" />
+        <Setter Property="Template" Value="{StaticResource OperationBar.Button.Template}" />
+    </Style>
+
+    <ControlTemplate x:Key="ActionCard.Button.Template" TargetType="{x:Type Controls:CardButton}">
+        <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{StaticResource Box.Corder.Radius}"
+                Effect="{StaticResource Element.Shadow.Effect}"
+                SnapsToDevicePixels="True">
+
+            <Border Margin="5,0,0,0"
+                    Background="White"
+                    CornerRadius="6">
+
+                <Grid Width="300"
+                      Height="85"
+                      Margin="10,5">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Margin="10,16" HorizontalAlignment="Left">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <ContentPresenter x:Name="contentPresenter"
+                                          HorizontalAlignment="Left"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Focusable="False"
+                                          RecognizesAccessKey="True"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          TextElement.Foreground="{TemplateBinding TitleBrush}" />
+
+                        <ContentPresenter x:Name="contentPresenterDescription"
+                                          Grid.Row="1"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Description}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Focusable="False"
+                                          RecognizesAccessKey="True"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          TextElement.FontSize="20"
+                                          TextElement.FontWeight="DemiBold"
+                                          TextElement.Foreground="Gray" />
+
+                    </Grid>
+
+                    <fa:ImageAwesome x:Name="buttonIcon"
+                                     Grid.Column="1"
+                                     Width="{TemplateBinding ImageWidth}"
+                                     Height="{TemplateBinding ImageHeight}"
+                                     Margin="{TemplateBinding Padding}"
+                                     HorizontalAlignment="Center"
+                                     Foreground="{TemplateBinding Foreground}"
+                                     Icon="{TemplateBinding Tag}" />
+                </Grid>
+            </Border>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+                <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+                <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="border" Property="Background" Value="#FFF4F4F4" />
+                <Setter TargetName="border" Property="BorderBrush" Value="#FFADB2B5" />
+                <Setter Property="Foreground" Value="#FF838383" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="ActionCard.Button.Style" TargetType="{x:Type Controls:CardButton}">
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Template" Value="{StaticResource ActionCard.Button.Template}" />
+    </Style>
+
+    <Style x:Key="HomePage.Button.Style" TargetType="{x:Type Controls:ImageButton}">
+        <Setter Property="FocusVisualStyle">
+            <Setter.Value>
+                <Style>
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <Rectangle Margin="2"
+                                           SnapsToDevicePixels="True"
+                                           Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                                           StrokeDashArray="1 2"
+                                           StrokeThickness="1" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="Orientation" Value="Vertical" />
+        <Setter Property="Width" Value="60" />
+        <Setter Property="Height" Value="60" />
+        <Setter Property="Template" Value="{StaticResource ImageButton.Button.Template}" />
+    </Style>
+
+    <Style x:Key="FocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="2"
+                               SnapsToDevicePixels="true"
+                               Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                               StrokeDashArray="1 2"
+                               StrokeThickness="1" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="Search.Button.Style" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+        <Setter Property="Background" Value="{StaticResource Accent.Brush}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="0, 5, 5, 0"
+                            SnapsToDevicePixels="true">
+                        <fa:ImageAwesome x:Name="buttonIcon"
+                                         Height="16"
+                                         Margin="{TemplateBinding Padding}"
+                                         HorizontalAlignment="Center"
+                                         Foreground="{TemplateBinding Foreground}"
+                                         Icon="Search" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="True">
+                            <Setter TargetName="buttonIcon" Property="Foreground" Value="{StaticResource Gray.Brush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ToggleMenu.Button.Style" TargetType="{x:Type ToggleButton}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Foreground" Value="LightGray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" SnapsToDevicePixels="true">
+                        <Grid>
+                            <fa:ImageAwesome x:Name="enabledIcon"
+                                             Foreground="{TemplateBinding Foreground}"
+                                             Icon="ArrowCircleLeft" />
+                            <fa:ImageAwesome x:Name="disabledIcon"
+                                             Foreground="{TemplateBinding Foreground}"
+                                             Icon="ArrowCircleRight" />
+                        </Grid>
+
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="enabledIcon" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="disabledIcon" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="false">
+                            <Setter TargetName="enabledIcon" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="disabledIcon" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

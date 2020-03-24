@@ -1,0 +1,173 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Store.Client.Styles"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!--  Sizes  -->
+    <system:Double x:Key="MainWindow.MainMenu.Width">150</system:Double>
+    <GridLength x:Key="MainWindow.Header.Height">74</GridLength>
+    <system:Double x:Key="MainMenu.Button.Height">35</system:Double>
+    <CornerRadius x:Key="Box.Corder.Radius"
+                  BottomLeft="8"
+                  BottomRight="8"
+                  TopLeft="8"
+                  TopRight="8" />
+
+    <system:Double x:Key="Card.Header.Height">51</system:Double>
+
+    <!--  Colors  -->
+    <Color x:Key="Header.Background.Color">#F6F6F6</Color>
+    <SolidColorBrush x:Key="Header.Background.Brush" Color="{StaticResource Header.Background.Color}" />
+
+    <Color x:Key="Divider.Color">#EAEAEA</Color>
+    <SolidColorBrush x:Key="Divider.Brush" Color="{StaticResource Divider.Color}" />
+
+    <Color x:Key="Accent.Color">#4e73df</Color>
+    <SolidColorBrush x:Key="Accent.Brush" Color="{StaticResource Accent.Color}" />
+
+    <Color x:Key="Blue.Color">#4e73df</Color>
+    <SolidColorBrush x:Key="Blue.Brush" Color="{StaticResource Blue.Color}" />
+
+    <Color x:Key="Indigo.Color">#6610f2</Color>
+    <SolidColorBrush x:Key="Indigo.Brush" Color="{StaticResource Indigo.Color}" />
+
+    <Color x:Key="Purple.Color">#6f42c1</Color>
+    <SolidColorBrush x:Key="Purple.Brush" Color="{StaticResource Purple.Color}" />
+
+    <Color x:Key="Pink.Color">#e83e8c</Color>
+    <SolidColorBrush x:Key="Pink.Brush" Color="{StaticResource Pink.Color}" />
+
+    <Color x:Key="Red.Color">#e74a3b</Color>
+    <SolidColorBrush x:Key="Red.Brush" Color="{StaticResource Red.Color}" />
+
+    <Color x:Key="Orange.Color">#fd7e14</Color>
+    <SolidColorBrush x:Key="Orange.Brush" Color="{StaticResource Orange.Color}" />
+
+    <Color x:Key="Yellow.Color">#f6c23e</Color>
+    <SolidColorBrush x:Key="Yellow.Brush" Color="{StaticResource Yellow.Color}" />
+
+    <Color x:Key="Green.Color">#1cc88a</Color>
+    <SolidColorBrush x:Key="Green.Brush" Color="{StaticResource Green.Color}" />
+
+    <Color x:Key="Teal.Color">#20c9a6</Color>
+    <SolidColorBrush x:Key="Teal.Brush" Color="{StaticResource Teal.Color}" />
+
+    <Color x:Key="Cyan.Color">#36b9cc</Color>
+    <SolidColorBrush x:Key="Cyan.Brush" Color="{StaticResource Cyan.Color}" />
+
+    <Color x:Key="Gray.Color">#858796</Color>
+    <SolidColorBrush x:Key="Gray.Brush" Color="{StaticResource Gray.Color}" />
+
+    <Color x:Key="MainWindow.Background.Color">#f8f9fc</Color>
+    <SolidColorBrush x:Key="MainWindow.Background.Brush" Color="{StaticResource MainWindow.Background.Color}" />
+
+    <DropShadowEffect x:Key="Element.Shadow.Effect"
+                      BlurRadius="40"
+                      Opacity="0.1" />
+
+    <!--  Logo  -->
+    <Style x:Key="HeaderLogo.TextBlock.Style" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontFamily" Value="Segoe Mono" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="Foreground" Value="SteelBlue" />
+        <Setter Property="Margin" Value="20,4,0,0" />
+    </Style>
+
+
+    <Style x:Key="Heading.Lable.Style" TargetType="Label">
+        <Setter Property="Foreground" Value="{StaticResource Accent.Brush}" />
+        <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <!--  Record Window  -->
+    <Style x:Key="RecordWindow.Lable.Style" TargetType="Label">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style x:Key="RecordWindow.TextBox.Style" TargetType="TextBox">
+        <Setter Property="Margin" Value="2,5" />
+        <Setter Property="Height" Value="28" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+
+    </Style>
+
+    <Style x:Key="RecordWindow.ComboBox.Style" TargetType="ComboBox">
+        <Setter Property="Margin" Value="2,5" />
+        <Setter Property="Height" Value="28" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+    </Style>
+
+    <Style x:Key="RecordWindow.UserControl.Style" TargetType="UserControl">
+        <Setter Property="MinWidth" Value="500" />
+        <Setter Property="MinHeight" Value="350" />
+        <Setter Property="Background" Value="{StaticResource Header.Background.Brush}" />
+    </Style>
+
+    <Style x:Key="SeachBox.TextBox.Style" TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="AllowDrop" Value="true" />
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{StaticResource Box.Corder.Radius}"
+                            SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                      Focusable="false"
+                                      HorizontalScrollBarVisibility="Hidden"
+                                      VerticalScrollBarVisibility="Hidden" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="border" Property="Opacity" Value="0.56" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="border" Property="BorderBrush" Value="Transparent" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter TargetName="border" Property="BorderBrush" Value="Transparent" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true" />
+                    <Condition Property="IsSelectionActive" Value="false" />
+                </MultiTrigger.Conditions>
+                <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="CardContainer.Border.Style" TargetType="Border">
+        <Setter Property="Margin" Value="15,0" />
+        <Setter Property="Background" Value="{StaticResource MainWindow.Background.Brush}" />
+        <Setter Property="CornerRadius" Value="{StaticResource Box.Corder.Radius}" />
+        <Setter Property="Effect" Value="{StaticResource Element.Shadow.Effect}" />
+    </Style>
+
+
+</ResourceDictionary>

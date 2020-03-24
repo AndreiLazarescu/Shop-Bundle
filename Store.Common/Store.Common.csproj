@@ -1,0 +1,124 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Icons\icons8_address_32px_1.png" />
+    <None Remove="Resources\Icons\icons8_add_new_32px.png" />
+    <None Remove="Resources\Icons\icons8_apple_maps_32px.png" />
+    <None Remove="Resources\Icons\icons8_back_32px.png" />
+    <None Remove="Resources\Icons\icons8_cancel_32px.png" />
+    <None Remove="Resources\Icons\icons8_coins_32px.png" />
+    <None Remove="Resources\Icons\icons8_communication_32px.png" />
+    <None Remove="Resources\Icons\icons8_customer_32px.png" />
+    <None Remove="Resources\Icons\icons8_forward_32px.png" />
+    <None Remove="Resources\Icons\icons8_gears_32px.png" />
+    <None Remove="Resources\Icons\icons8_google_alerts_32px.png" />
+    <None Remove="Resources\Icons\icons8_help_32px.png" />
+    <None Remove="Resources\Icons\icons8_home_32px.png" />
+    <None Remove="Resources\Icons\icons8_key_32px.png" />
+    <None Remove="Resources\Icons\icons8_menu_32px_1.png" />
+    <None Remove="Resources\Icons\icons8_ok_32px.png" />
+    <None Remove="Resources\Icons\icons8_product_32px.png" />
+    <None Remove="Resources\Icons\icons8_purchase_order_32px.png" />
+    <None Remove="Resources\Icons\icons8_push_notifications_32px.png" />
+    <None Remove="Resources\Icons\icons8_secured_letter_32px.png" />
+    <None Remove="Resources\Icons\icons8_shipped_32px.png" />
+    <None Remove="Resources\Icons\icons8_todo_list_32px.png" />
+    <None Remove="Resources\Icons\icons8_trash_32px.png" />
+    <None Remove="Resources\Icons\icons8_user_32px_4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Icons\icons8_address_32px_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_add_new_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_apple_maps_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_back_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_cancel_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_coins_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_communication_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_customer_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_forward_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_gears_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_google_alerts_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_help_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_home_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_key_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_menu_32px_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_ok_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_product_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_purchase_order_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_push_notifications_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_secured_letter_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_shipped_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_todo_list_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_trash_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\icons8_user_32px_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tiny.RestClient" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Store.DataAccessLayer\Store.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Store.Interfaces\Store.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Configuration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

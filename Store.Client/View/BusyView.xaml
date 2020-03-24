@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Store.Client.View.BusyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:local="clr-namespace:Store.Client.View"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:prism="http://prismlibrary.com/"
+             d:DesignHeight="600"
+             d:DesignWidth="1280"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Visibility="{Binding IsActive, Converter={StaticResource BooleanToVisibilityConverter}}"
+             mc:Ignorable="d">
+    <UserControl.Background>
+        <SolidColorBrush Opacity="0.6" Color="{StaticResource Header.Background.Color}" />
+    </UserControl.Background>
+    <Grid>
+        <fa:ImageAwesome Width="48"
+                         Height="48"
+                         Foreground="{StaticResource Divider.Brush}"
+                         Icon="Refresh"
+                         Spin="True" />
+    </Grid>
+</UserControl>

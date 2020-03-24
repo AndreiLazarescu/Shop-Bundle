@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Store.Client.Controls.TableFooter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:Store.Client.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:local="clr-namespace:Store.Client.Controls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Height="40"
+             d:DesignHeight="50"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid Margin="5,5,15,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <ComboBox Width="55"
+                  HorizontalContentAlignment="Center"
+                  ItemsSource="{Binding PageCountValues}"
+                  SelectedItem="{Binding PageCount, Mode=TwoWay}"
+                  Style="{DynamicResource TableFooter.ComboBox.Style}" />
+
+        <local:ImageButton Grid.Column="2"
+                           Width="20"
+                           Margin="0"
+                           Command="{Binding PrevCommand}"
+                           ImageHeight="15"
+                           Style="{StaticResource Header.Button.Style}"
+                           Tag="{x:Static fa:FontAwesomeIcon.ChevronLeft}" />
+        <TextBlock Grid.Column="3"
+                   Margin="5,5"
+                   FontSize="14"
+                   FontWeight="Bold"
+                   Foreground="{StaticResource Accent.Brush}"
+                   Text="{Binding CurrentPage}"
+                   TextAlignment="Center" />
+        <local:ImageButton Grid.Column="4"
+                           Width="20"
+                           Margin="0"
+                           Command="{Binding NextCommand}"
+                           ImageHeight="15"
+                           Style="{StaticResource Header.Button.Style}"
+                           Tag="{x:Static fa:FontAwesomeIcon.ChevronRight}" />
+
+    </Grid>
+</UserControl>
